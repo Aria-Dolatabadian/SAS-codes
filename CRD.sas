@@ -1,4 +1,4 @@
-DATA najmeh;
+DATA mydata;
 input r t yield;
 cards;
 1 1 12
