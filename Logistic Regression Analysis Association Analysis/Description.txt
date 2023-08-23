@@ -1,0 +1,20 @@
+This SAS code accomplishes the following tasks:
+1. **Library Reference Creation:** It creates a reference to a SAS library named `mydata` and associates it with the directory located at `'E:\'`. 
+This library reference allows you to access and store SAS datasets in that directory.
+2. **Data Import:** It reads data from a text file named `'SNP.txt'` located in the `'E:\'` directory. 
+The data in the text file is assumed to be tab-delimited ('09'x denotes a tab delimiter), and it is read into a SAS dataset named `GenomicData`. 
+The dataset has three variables: `Individual`, `SNP`, and `DiseaseStatus`.
+3. **Logistic Regression Analysis:** It performs a logistic regression analysis on the `GenomicData` dataset to study the association between the `SNP` variable and the `DiseaseStatus` variable. 
+Here's a breakdown of the logistic regression part:
+   - `proc logistic data=mydata.GenomicData;`: This initiates a logistic regression procedure using the `GenomicData` dataset.
+   - `model DiseaseStatus(event='1') = SNP / link=logit;`: In this part, it specifies the logistic regression model. 
+It models the probability of the event `'1'` (i.e., the event of having the disease) occurring as a function of the `SNP` variable. 
+The `link=logit` option indicates that a logistic regression model with a logit link function will be used.
+   - `output out=AssociationResults predicted=PredProb;`: 
+This line specifies that the predicted probabilities and other results of the logistic regression will be saved to a new dataset named `AssociationResults`. 
+The predicted probabilities are stored in a variable called `PredProb`.
+4. After running this code, you will have the results of the logistic regression analysis stored in the `AssociationResults` dataset, 
+which includes predicted probabilities of disease status based on the SNP variable.
+This code is typically used in genetic association studies to assess whether a particular
+genetic variant (represented by the `SNP` variable) is associated with a specific disease or trait (represented by the `DiseaseStatus` variable) using logistic regression. 
+The results, including odds ratios, p-values, and predicted probabilities, can help researchers understand the relationship between genetic factors and the risk of developing a particular disease.
