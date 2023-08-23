@@ -18,3 +18,11 @@ which includes predicted probabilities of disease status based on the SNP variab
 This code is typically used in genetic association studies to assess whether a particular
 genetic variant (represented by the `SNP` variable) is associated with a specific disease or trait (represented by the `DiseaseStatus` variable) using logistic regression. 
 The results, including odds ratios, p-values, and predicted probabilities, can help researchers understand the relationship between genetic factors and the risk of developing a particular disease.
+
+In SNP.txt data:
+0: Homozygous for the reference allele.
+This means the individual has two copies of the reference allele at that specific SNP locus.
+1: Heterozygous.
+This indicates that the individual has one copy of the reference allele and one copy of a variant allele at the SNP locus.
+2: Homozygous for the variant allele.
+This means the individual has two copies of the variant allele at the SNP locus.
