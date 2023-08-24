@@ -2,10 +2,10 @@
 data sales_data;
    input Product $ Sales Color $;
    datalines;
-ProductA 1000 Blue
-ProductB 1500 Red
-ProductC 800 Green
-ProductD 1200 Yellow
+Corn 1000 Blue
+Wheat 1500 Red
+Barley 800 Green
+Canola 1200 Yellow
 ;
 run;
 
