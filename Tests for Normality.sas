@@ -1,4 +1,4 @@
-Data saeid;
+Data test;
 Input treat block a b;
 Cards;
 1      1      34      93
@@ -57,12 +57,12 @@ Cards;
 10      5      24.6      146.1
 11      5      43.8      40.9
 ;
-proc GLM data=saeid;
+proc GLM data=test;
 class treat block;
 model a b=treat block/ss3;
 format a b;
-output out=saeid2 p=pa pb r=ra rb;
-proc univariate data=saeid2 plot normal ;
+output out=test2 p=pa pb r=ra rb;
+proc univariate data=test2 plot normal ;
 var a b ra rb;
 qqplot a b ra rb/normal (mu=est sigma=est color=red l=1);
 run;
