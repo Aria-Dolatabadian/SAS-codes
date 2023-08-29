@@ -1,5 +1,4 @@
 /* Sample data - Replace with your own data */
-
 data sales_data;
    input Product $ Sales Color $;
    datalines;
