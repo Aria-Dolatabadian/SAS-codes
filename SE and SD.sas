@@ -17,7 +17,6 @@ RUN ;
 
 
 
-
 data mytest;
 input t	a;
 cards;
