@@ -151,4 +151,5 @@ tssp=log(sspold)*sum[2];
 chisq=(1/c)*(tssp-sum[6]);
 prob=1-probchi(chisq,e-1);
 PRINT chisq PROB;
+
 run;
