@@ -8,7 +8,6 @@ data mydata;
 150 155 157
 149 154 158
 ;
-
 /* Perform hierarchical clustering */
 proc fastclus data=mydata outtree=cluster_tree maxclusters=3 maxiter=100;
    var var1 var2 var3;
