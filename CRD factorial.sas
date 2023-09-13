@@ -1,4 +1,3 @@
-
 data test;
 input  g s gs yield;
 cards;
