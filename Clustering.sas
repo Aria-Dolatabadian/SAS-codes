@@ -1,4 +1,5 @@
 /* Create a dataset */
+
 data mydata;
    input var1 var2 var3;
    datalines;
