@@ -1,4 +1,5 @@
 data a;
+
 input year rep treat$ y;
 cards;
 1	1	Z0N1	0.424
