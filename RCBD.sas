@@ -26,4 +26,5 @@ proc glm;
 class r t;
 model yield=r t;
 MEANS t / ALPHA=0.05 DUNCAN;
+
 RUN;
