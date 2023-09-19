@@ -1,4 +1,5 @@
 /* Define a library reference to the folder containing your CSV file */
+
 libname mydata 'E:\';
 
 /* Read the CSV file into a SAS dataset */
