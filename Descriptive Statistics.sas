@@ -1,4 +1,5 @@
 /* Create a sample dataset */
+
 data grades;
   input StudentID $ Score;
   datalines;
