@@ -1,4 +1,3 @@
-
 /*Suppose you have collected test scores from a group of students, and you want to test whether the average test score for this group is significantly different from a specified value (e.g., a population mean of 75). */
 /*You can use a one-sample t-test for this hypothesis test.*/
 
