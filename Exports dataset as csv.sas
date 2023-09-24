@@ -12,4 +12,5 @@ proc export data=sample_data
    outfile='E:\sample_data.csv'
    dbms=csv
    replace;
+   
 run;
