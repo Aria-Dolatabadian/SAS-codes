@@ -8,7 +8,6 @@ Barley 800 Green
 Canola 1200 Yellow
 ;
 run;
-
 /* Create a bar chart with custom bar colors */
 
 proc sgplot data=sales_data;
