@@ -1,4 +1,4 @@
-Data Saeid;
+Data test;
 Input treat block A B;
 a=log10 (a+1);
 b=log10 (b+1);
@@ -43,7 +43,7 @@ Proc print;
 var treat block A B;
 Run; 
 
-proc glm data=Saeid;
+proc glm data=test;
 class  block treat;
 model A B  = block treat/ss3;
 *MEANS treat / ALPHA=0.05 duncan;
