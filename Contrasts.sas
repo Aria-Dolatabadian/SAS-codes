@@ -83,3 +83,61 @@ contrast 'one' treat -3 -3 -3 1 1 1 1 1 1 1 1 1;
 contrast 'two' treat 1 1 1 1 1 1 1 1 1 -3 -3 -3;
 contrast 'three' treat 1 1 1 1 1 1 1 1 1 1 1 -11;
 run;quit;
+
+
+
+
+#Or
+
+
+data a;
+input rep treat$ y;
+cards;
+1	Z0N1	0.424
+1	Z0N2	0.593
+1	Z0N3	0.593
+1	Z1N1	0.649
+1	Z1N2	0.615
+1	Z1N3	0.706
+1	Z2N1	0.681
+1	Z2N2	0.537
+1	Z2N3	0.693
+1	Z3N1	0.756
+1	Z3N2	0.724
+1	Z3N3	0.793
+2	Z0N1	0.481
+2	Z0N2	0.481
+2	Z0N3	0.681
+2	Z1N1	0.524
+2	Z1N2	0.581
+2	Z1N3	0.706
+2	Z2N1	0.649
+2	Z2N2	0.818
+2	Z2N3	0.818
+2	Z3N1	0.637
+2	Z3N2	0.712
+2	Z3N3	0.824
+3	Z0N1	0.452
+3	Z0N2	0.537
+3	Z0N3	0.597
+3	Z1N1	0.537
+3	Z1N2	0.593
+3	Z1N3	0.623
+3	Z2N1	0.565
+3	Z2N2	0.706
+3	Z2N3	0.706
+3	Z3N1	0.696
+3	Z3N2	0.694
+3	Z3N3	0.797
+
+;			
+
+proc glm;
+class rep treat;
+MODEL Y= REP treat;
+*treat-order Z0N1	Z0N2	Z0N3	Z1N1	Z1N2	Z1N3	Z2N1	Z2N2	Z2N3	Z3N1	Z3N2	Z3N3;
+contrast 'one' treat -3 -3 -3 1 1 1 1 1 1 1 1 1;
+contrast 'two' treat 1 1 1 1 1 1 1 1 1 -3 -3 -3;
+contrast 'three' treat 1 1 1 1 1 1 1 1 1 1 1 -11;
+run;
+quit;
